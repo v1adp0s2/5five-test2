@@ -1,7 +1,6 @@
-SPECTACLE
+5Five
 =========
 
 Product divisions:
 
-* Spectacle Continuum - presentation tool for teams
-* Spectacle Signage - web based signage tool
+* 5Five Apps - web application for easy and best experience mobile apps creation
