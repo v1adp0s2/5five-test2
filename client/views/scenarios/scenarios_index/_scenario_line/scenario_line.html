@@ -1,0 +1,37 @@
+<template name="ScenarioLine">
+  {{#each scenarios}}
+    <tr>
+      <td class="col-sm-8 col-xs-6">
+        <a href="{{pathFor 'scenarios.show'}}"><strong>{{title}}</strong></a>
+        <span class="hidden-xs"> by {{author}}</span><br/>
+        <span class="hidden-xs">{{slides slidesCount}}</span>
+      </td>
+      <td class="col-sm-8 col-xs-6">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn {{#if displayTitle}}btn-info{{else}}btn-default{{/if}} col-xs-10">
+              {{#if displayTitle}}
+                {{displayTitle}}
+              {{else}}
+                none
+              {{/if}}
+            </button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#" id="{{_id}}" class="clean-scenario">none</a></li>
+              {{#each displays}}
+                <li><a href="/{{../_id}}/{{_id}}" id="{{../_id}}/{{_id}}" class="display-title" name="display_title">{{title}}</a></li>
+              {{/each}}
+              <li class="divider"></li>
+              <li><a href="{{pathFor 'displays.index'}}"><span class="glyphicon glyphicon-th"></span> Manage Displays</a></li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+  {{else}}
+    <tr>
+      <td colspan="2">No scenarios found. Please <a href="{{pathFor 'scenarios.new'}}">create</a> one.</td>
+    </tr>
+  {{/each}}
+</template>

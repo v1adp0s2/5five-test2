@@ -1,0 +1,17 @@
+<template name="ScenariosShow">
+  {{#Scrollview}}
+    {{#Surface size="[undefined,1000]" style="padding-top: 20px; padding-bottom: 20px"}}
+      {{> ScenarioBreadcrumb}}
+
+      <div class="container">
+        <div class="row">
+
+          {{#each slides}}
+            {{> SlideThumbnail}}
+          {{/each}}
+
+        </div>
+      </div>
+    {{/Surface}}
+  {{/Scrollview}}
+</template>

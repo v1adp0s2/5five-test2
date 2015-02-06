@@ -1,0 +1,25 @@
+<template name="ScenarioBreadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ol class="breadcrumb">
+          <li>
+            <a href="{{pathFor 'scenarios.index'}}">
+              <span class="glyphicon glyphicon-th-list"></span><span class="hidden-xs"> Scenarios</span>
+            </a>
+          </li>
+          <li>
+            {{title}}&nbsp;
+            {{> ScenarioActions}}
+          </li>
+          <li class="hidden-xs">
+            <a href="#" class="create-slide" id="{{_id}}">
+              <span class="glyphicon glyphicon-plus"></span> Create slide
+            </a>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+  </div>
+</template>

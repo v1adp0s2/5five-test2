@@ -1,0 +1,39 @@
+<template name="DisplaysShow">
+  <div class="display-canvas">
+    {{#if imageURL}}
+      <img src="{{imageURL}}" style="width: {{zoomStyle}};" class="display-slide">
+    {{else}}
+      <video autoplay style="width: {{zoomStyle}};" class="display-slide">
+        <source src="/videos/demo1.mp4">
+      </video>
+    {{/if}}
+  </div>
+
+  <div class="left-arrow">
+    <a href="#" id="previous-slide" class="btn btn-default">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="right-arrow">
+    <a href="#" id="next-slide" class="btn btn-default">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  {{#if currentUser}}
+    <a href="#" id="divNEXT" class="tapping-square"></a>
+
+    <div class="close-button">
+      <a href="#" id="display-close" class="btn btn-default">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </a>
+    </div>
+  {{/if}}
+
+  <div class="zoom-button">
+    <a href="#" id="image-zoom" class="btn btn-default">
+      <span class="glyphicon glyphicon-resize-{{zoomLevel}}" aria-hidden="true"></span>
+    </a>
+  </div>
+</template>

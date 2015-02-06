@@ -1,0 +1,18 @@
+<template name="DisplaysEdit">
+  <td class="display-title-cell" id="{{_id}}">
+    {{#unless scenarioId}}
+      <a href="#"><span class="glyphicon glyphicon-trash pull-right remove-display"></span></a>
+    {{/unless}}
+    <div class="display-title-content">
+      <a href="{{pathFor 'displays.show'}}">{{title}}</a>
+    </div>
+    <div class="display-edit-form" style="display: none;">
+      <form>
+        <div class="input-group col-xs-12">
+          <input type="text" name="display_title" class="form-control" placeholder="Change the display title" value="{{title}}"/>
+        </div>
+      </form>
+    </div>
+  </td>
+</template>
+

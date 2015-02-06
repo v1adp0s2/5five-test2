@@ -1,0 +1,51 @@
+<template name="SlideThumbnail">
+  <div class="col-xs-6 col-sm-3 col-lg-2">
+    <div class="well page-box" id={{_id}} style="background-image: url('{{img backgroundImage._id}}'); background-size: cover; min-height: 175px;">
+      {{#unless backgroundImage}}
+        <div class="dropzone">
+          <div class="dropzone-text" style="vertical-align: middle; text-align: center; color: gray;">
+            <span class="glyphicon glyphicon-cloud-upload cloud-upload-icon"></span>
+            <br/>Drop file<br/>to upload<br/>
+          </div>
+        </div>
+      {{/unless}}
+
+      {{#unless first}}
+        <a href="#" class="move-left">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      {{/unless}}
+      {{#unless last}}
+        <a href="#" class="pull-right move-right">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      {{/unless}}
+
+      {{#if listGroup}}
+        <div class="list-group" style="position: absolute; left: 15px; right: 15px; bottom: 4px;">
+          {{#if backgroundImage}}
+            <a href="#" class="list-group-item text-center remove-image">Remove Image</a>
+          {{else}}
+            <a href="#" class="list-group-item text-center remove-slide">Remove Slide</a>
+          {{/if}}
+          <span class="list-group-item">&nbsp;</span>
+        </div>
+      {{/if}}
+
+    </div>
+
+
+    <div class="dropzone-spinner">
+      {{> spinner}}
+    </div>
+
+    <a href="#" class="push-bottom">
+      #{{position}}
+    </a>
+
+    <a href="#" class="push-bottom-pull-right cog">
+      <span class="glyphicon glyphicon-cog"></span>
+    </a>
+
+  </div>
+</template>

@@ -1,0 +1,48 @@
+<template name="ScenariosIndex">
+  {{#Scrollview}}
+    {{#Surface size="[undefined,true]" style="padding-top: 20px; padding-bottom: 20px"}}
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><span class="glyphicon glyphicon-th-list"></span> Scenarios</li>
+              <li><a href="{{pathFor 'displays.index'}}"><span class="glyphicon glyphicon-th"></span> Displays</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <strong><span class="glyphicon glyphicon-th-list"></span>  Current scenarios</strong>
+                <a href="{{pathFor 'scenarios.new'}}" class="pull-right">
+                  <span class="glyphicon glyphicon-plus"></span> Create scenario
+                </a>
+              </div>
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Display</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {{> ScenarioLine}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            Public scenarios: 1 / 1
+          </div>
+        </div>
+      </div>
+    {{/Surface}}
+  {{/Scrollview}}
+</template>

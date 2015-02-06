@@ -1,0 +1,11 @@
+<template name="MasterLayout">
+  {{#famousContext id="mainCtx"}}
+    {{#HeaderFooterLayout id="hfl" headerSize="50" footerSize="50"}}
+      {{> Surface template="MainMenu" target="header" class="header"  translate="[0,0,100]"}}
+      {{#RenderController target="content"}}
+        {{> yield}}
+      {{/RenderController}}
+      {{> Surface template="MainFooter" target="footer" class="footer"  translate="[0,0,100]"}}
+    {{/HeaderFooterLayout}}
+  {{/famousContext}}
+</template>

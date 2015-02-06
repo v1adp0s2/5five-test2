@@ -1,0 +1,56 @@
+<template name="SlidesNew">
+  {{#Scrollview}}
+    {{#Surface size="[undefined,250]" style="padding-top: 20px; padding-bottom: 20px"}}
+      <div class="container">
+        <div class="row">
+          <ol class="breadcrumb">
+            <li>
+              <a href="{{pathFor 'scenarios.index'}}">
+                <span class="glyphicon glyphicon-th-list"></span><span class="hidden-xs"> Scenarios</span>
+              </a>
+            </li>
+            <li><a href="{{pathFor 'scenarios.show' _id}}">{{title}}</a></li>
+            <li class="hidden-xs">
+              New slide
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Slide title
+
+
+                <div class="btn-group pull-right">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-cog"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" id="set-background-color">Set background color</a></li>
+                    <li><a href="#">Set background image</a></li>
+                    <li><a href="#" id="hide-grid">Hide grid helper</a></li>
+                    <li><a href="#" id="show-grid">Show grid helper</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Portrait</a></li>
+                    <li><a href="#">Landscape</a></li>
+                    <li><a href="#">Square</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="panel-body canvas-area">
+                <div class="canvas-background"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/Surface}}
+  {{/Scrollview}}
+</template>

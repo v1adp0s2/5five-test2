@@ -1,0 +1,20 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+iron:router
+less
+accounts-password
+ian:accounts-ui-bootstrap-3
+cfs:standard-packages
+cfs:gridfs
+sacha:spin
+
+twbs:bootstrap
+cfs:dropped-event
+bojicas:bootstrap-alerts
+fortawesome:fontawesome
+mjn:famous
+gadicohen:famous-views
